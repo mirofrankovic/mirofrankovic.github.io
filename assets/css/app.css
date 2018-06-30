@@ -1,0 +1,78 @@
+body {
+    margin: 0;
+    padding: 0;
+
+}
+.navbar-text > a {
+    color: inherit;
+    text-decoration: none;
+}
+body {
+    padding-top: 0;
+    padding-bottom: 100px;
+}
+.navbar-expand-sm {
+    background-color: white;
+    border-color: white;
+    color: black;
+    position: fixed;
+    top: 0px;
+    height: 80px;
+
+}
+.navbar-expand-sm .navbar-brand {
+    color: black;
+}
+.navbar-expand-sm .navbar-brand:hover,
+.navbar-expand-sm .navbar-brand:focus {
+    color: lightskyblue;
+    background-color: transparent;
+}
+.navbar-expand-sm .navbar-nav > li > a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+}
+.navbar-expand-sm .navbar-nav > li > a:hover,
+.navbar-expand-sm .navbar-nav > li > a:focus{
+    color: lightskyblue;
+    background-color: transparent;
+}
+.dropdown-menu {
+    background-color: white;
+}
+.dropdown-menu a {
+    color: black;
+    display: block;
+    text-decoration: none;
+    padding: 14px 16px;
+
+}
+.dropdown-menu a:hover {
+    background-color: lightgrey;  
+}
+.navbar-brand img {
+    height: 65px;
+}
+.icons {
+    position: absolute;
+}
+.icons a {
+    color: white;
+    font-size: 30px;
+    margin: 2px;
+
+}
+.fb {
+    background: #3b5999;
+}
+.tw {
+    background: #55acee;
+}
+.gog {
+    background: #dd4b39;
+}
+.lin {
+    background: #0077B5;
+}

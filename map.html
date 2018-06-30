@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="assets/img/favicon.ico">
+    
+    <title>Map</title>
+
+    <!-- Jasmine -->
+    <link rel="shortcut icon" type="image/png" href="lib/jasmine-2.4.1/jasmine_favicon.png">
+    <link rel="stylesheet" href="lib/jasmine-2.4.1/jasmine.css">
+
+    <script src="lib/jasmine-2.4.1/jasmine.js"></script>
+    <script src="lib/jasmine-2.4.1/jasmine-html.js"></script>
+    <script src="lib/jasmine-2.4.1/boot.js"></script>
+
+    <!-- include source files here... -->
+  <script src="src/Player.js"></script>
+  <script src="src/Song.js"></script>
+ 
+  <!-- include spec files here... -->
+  <script src="spec/SpecHelper.js"></script>
+  <script src="spec/PlayerSpec.js"></script>
+
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/carousel.css" type="text/css" rel="stylesheet">
+    <link href="assets/css/app.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+            body {
+           padding-top: 125px; 
+            }
+            .icons {
+            position: absolute;
+        }
+        .icons a {
+            color: white;
+            font-size: 30px;
+            margin: 2px;
+
+        }
+        .fb {
+            background: #3b5999;
+        }
+        .tw {
+            background: #55acee;
+        }
+        .gog {
+            background: #dd4b39;
+        }
+        .lin {
+            background: #0077B5;
+        }
+        label.required:after {
+        position: relative;
+        left: 3px;
+        top: -3px;
+        color: #e32;
+        content: '*';
+        display: inline;
+        }
+         
+    </style>
+  </head>
+  <body>
+
+    <!-- Header class -->
+     
+ 
+    <nav class="navbar fixed-top navbar-expand-sm" role="navigation">
+            <a class="navbar-brand" href="#">
+            <img src="assets/img/logo2-navbar.jpg"style="max-width:80px;">A Student Accomodation</a>
+      
+
+    <div class="navbar-collapse collapse" id="navbar-collapse-main"> 
+        <ul class="nav navbar-nav ml-auto">
+           <li class="active"><a href="index.html">Home</a></li>
+           <li><a href="gallery.html">Gallery</a></li>
+           <li><a href="news.html">News and Advice</a></li>
+           <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact<b class="caret"></b></a>
+              <ul class="dropdown-menu">
+               <li><a href="aboutus.html">About US</a></li>
+               <li><a href="map.html">Our Location</a></li>
+              </ul>
+           </li>
+        </ul>
+    </div>
+  </div>
+</nav>
+ 
+<section id="contact" onsubmit="onSubmit()" name="contact">
+    <div class="container">
+       <div class="row">
+        <div class="col-sm-12">
+        <h1 class="text-center">Our Office</h1>
+       </div>
+    </div>
+    <div id="map" style="width:100%; height:350px"></div>
+
+    <div class="container text-center text-sm-left">          
+
+        <div class="row">
+            <div class="col-sm-12">
+            <h1 class="text-center">Visit Us</h1>
+            <ul class="list-unstyled">
+                    <li>VaniliaLemon</li>
+                    <li>26 Milton Grove</li>
+                    <li>Manchester</li>
+                    <li>United Kingdom</li> 
+            </ul>
+            </div>
+        </div>
+    </div>
+<div id="form-container">
+    <form id="contact-form" class="form-horizontal bg-light" onsubmit="onSubmit()" name="contact-form" action="#">
+        <div class="container">
+        
+        <div class="row"> 
+            <div class="col"></div>
+            <div class="col-sm-2">
+                <div class="form-group">
+                        <label class="required" for="name">Your Name</label>
+                        <input type="text" id="name" class="form-control" placeholder="" required="required" name="name">  
+                        <span id="yourname" class="text-danger font-weight-bold"></span>
+                </div>
+                <div class="form-group">
+                        <label class="required" for="email">Your Email</label>
+                        <input type="email" id="email" class="form-control" placeholder="" required="required" name="email">
+                </div>
+                <div class="form-group">
+                        <label class="required" for="message">Message</label>
+                        <textarea type="text" id="message" class="form-control" placeholder="" required="required" name="message" style="height:100px;"></textarea>
+                </div>
+                <div class="form-group">
+                        <label for="form_contactpreference">Do you want to subscribe to our newsletter?</label><br>
+                        <label class="form-group-label" for="formCheck1">Yes</label>
+                        <input type="checkbox" id="formCheck1" name="formCheck" class="form-group-input">
+                        <label class="form-group-label" for="formCheck2">No</label>   
+                        <input type="checkbox" id="formCheck2" name="formCheck" class="form-group-input"> 
+                </div>
+                <input type="submit" onclick="onClickSubmitButton()" class="btn btn-primary" id="register" value="Submit" name="submit">
+            </div>
+            <div class="col"></div>
+            
+                        
+                     
+                        
+                
+                        
+        </div>
+        
+                 
+        </div>                
+    </form>
+    </div>
+
+                
+                          
+</section>
+<hr />
+                                           
+    <div id="footer-container">            
+      <footer class="site-footer font-small">
+          <div class="container text-center text-sm-left">
+              <div class="row">
+                  <div class="col-sm-4">
+                      <p class="text-uppercase">Info</p>
+                      <p>We are easily reached by public transport.</p>
+                      <p>Buses that stop nearby: 85, 86</p>
+                      <p>Opening Times: Mon-Fri: 09.00-18.00</p>
+                  </div>
+                  <div class="col-sm-2">
+                      <p class="text-uppercase">About</p>
+                      <ul class="list-unstyled">
+                          <li><p><a href="index.html">Home</a></p></li>
+                          <li><p><a href="gallery.html">Gallery</a></p></li>
+                          <li><p><a href="news.html">News</a></p></li>
+                          <li><p><a href="aboutus.html">About Us</a></p></li>
+                          <li><p><a href="privacy.html">Privacy Policy</a></p></li>
+                      </ul>
+                  </div>
+                  <div class="col-sm-4">
+                      <p class="text-uppercase">Get in touch</p>
+                      <ul class="list-unstyled">
+                          <li><p><i class="fa fa-envelope mr-3"></i> miro.frankovic@gmail.com</p></li>
+                          <li><p><i class="fa fa-phone mr-3"></i> 07889775301</p></li>
+                      </ul>
+                  </div>
+                
+                  <div class="col-sm-2">
+                      <p class="text-uppercase">Follow Us</p>
+
+                       <div class="icons">
+                        <a href="https://www.facebook.com/"><i class="fb fa fa-facebook"></i></a>
+                        <a href="https://twitter.com/"><i class="tw fa fa-twitter"></i></a>
+                        <a href="https://plus.google.com/"><i class="gog fa fa-google-plus"></i></a>
+                        <a href="https://uk.linkedin.com/"><i class="lin fa fa-linkedin"></i></a>
+                       </div>
+                      
+                  </div>
+          
+              </div>
+              <div class="footer-copyright text-center py-3">© Copyright &middot; VaniliaLemon  &middot; 2018</div>
+              <div class="float-right"><a href="#">Back to top</a></div>
+          </div>
+          
+            
+      </footer> 
+    </div>
+
+
+      
+
+                               
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>   
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.min.js"></script> 
+        <script src="validation.js"></script>
+
+        <script type="text/javascript" src="https://maps.google.com/maps/api/js"></script>
+        <script>
+             function initMap() {
+                var myCenter = new google.maps.LatLng(53.450,-2.271);
+                var mapCanvas = document.getElementById("map");
+                var mapOptions = {center: myCenter, zoom: 12};
+                var map = new google.maps.Map(mapCanvas, mapOptions);
+                var marker = new google.maps.Marker({position:myCenter});
+                marker.setMap(map);
+
+                
+             }
+             
+             
+              function onSubmit(){
+
+                  let serializeForm = $('contact-form').serialize;
+                  alert(serializeForm);
+                  return false;
+
+                  
+              }
+               function onClickSubmitButton(){
+                   $('form').submit();
+                   return true;
+               }
+    
+
+    
+
+
+        
+        </script>
+        <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAeDRcyB14AfkGhnZ8nrvSUfRchGeWoZgg&callback=initMap"></script>
+        </body>    
+  </html>
